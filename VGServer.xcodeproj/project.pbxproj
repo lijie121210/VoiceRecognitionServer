@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		1855001D1E57EE5500DADEF7 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1855001C1E57EE5500DADEF7 /* main.swift */; };
+		185500241E57EEEF00DADEF7 /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185500231E57EEEF00DADEF7 /* Server.swift */; };
+		1855002E1E57F9A100DADEF7 /* CocoaAsyncSocket.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1855002D1E57F9A100DADEF7 /* CocoaAsyncSocket.framework.dSYM */; };
+		185500301E5831BE00DADEF7 /* CocoaAsyncSocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1855002F1E5831BE00DADEF7 /* CocoaAsyncSocket.framework */; };
+		185500331E58320300DADEF7 /* CocoaAsyncSocket.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 185500321E58320300DADEF7 /* CocoaAsyncSocket.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1855003B1E59A8FB00DADEF7 /* Speech.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1855003A1E59A8FB00DADEF7 /* Speech.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -20,11 +25,36 @@
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
+		1855002A1E57F92900DADEF7 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Carthage/Build/Mac;
+			dstSubfolderSpec = 16;
+			files = (
+				1855002E1E57F9A100DADEF7 /* CocoaAsyncSocket.framework.dSYM in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		185500311E5831E500DADEF7 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				185500331E58320300DADEF7 /* CocoaAsyncSocket.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		185500191E57EE5500DADEF7 /* VGServer */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = VGServer; sourceTree = BUILT_PRODUCTS_DIR; };
 		1855001C1E57EE5500DADEF7 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		185500231E57EEEF00DADEF7 /* Server.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
+		1855002D1E57F9A100DADEF7 /* CocoaAsyncSocket.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = CocoaAsyncSocket.framework.dSYM; path = Carthage/Build/Mac/CocoaAsyncSocket.framework.dSYM; sourceTree = "<group>"; };
+		1855002F1E5831BE00DADEF7 /* CocoaAsyncSocket.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CocoaAsyncSocket.framework; path = Carthage/Build/Mac/CocoaAsyncSocket.framework; sourceTree = "<group>"; };
+		185500321E58320300DADEF7 /* CocoaAsyncSocket.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CocoaAsyncSocket.framework; path = Carthage/Build/Mac/CocoaAsyncSocket.framework; sourceTree = "<group>"; };
+		1855003A1E59A8FB00DADEF7 /* Speech.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Speech.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				185500301E5831BE00DADEF7 /* CocoaAsyncSocket.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,8 +72,10 @@
 		185500101E57EE5500DADEF7 = {
 			isa = PBXGroup;
 			children = (
+				185500291E57F8BF00DADEF7 /* Class */,
 				1855001B1E57EE5500DADEF7 /* VGServer */,
 				1855001A1E57EE5500DADEF7 /* Products */,
+				185500261E57F86900DADEF7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,6 +95,26 @@
 			path = VGServer;
 			sourceTree = "<group>";
 		};
+		185500261E57F86900DADEF7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				185500321E58320300DADEF7 /* CocoaAsyncSocket.framework */,
+				1855002F1E5831BE00DADEF7 /* CocoaAsyncSocket.framework */,
+				1855002D1E57F9A100DADEF7 /* CocoaAsyncSocket.framework.dSYM */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		185500291E57F8BF00DADEF7 /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				185500231E57EEEF00DADEF7 /* Server.swift */,
+				1855003A1E59A8FB00DADEF7 /* Speech.swift */,
+			);
+			name = Class;
+			path = VGServer;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -72,6 +125,8 @@
 				185500151E57EE5500DADEF7 /* Sources */,
 				185500161E57EE5500DADEF7 /* Frameworks */,
 				185500171E57EE5500DADEF7 /* CopyFiles */,
+				1855002A1E57F92900DADEF7 /* CopyFiles */,
+				185500311E5831E500DADEF7 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -121,6 +176,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1855003B1E59A8FB00DADEF7 /* Speech.swift in Sources */,
+				185500241E57EEEF00DADEF7 /* Server.swift in Sources */,
 				1855001D1E57EE5500DADEF7 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -220,6 +277,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DEVELOPMENT_TEAM = LMFYAZF64N;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
+				"LD_RUNPATH_SEARCH_PATHS[arch=*]" = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -229,6 +291,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DEVELOPMENT_TEAM = LMFYAZF64N;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
+				"LD_RUNPATH_SEARCH_PATHS[arch=*]" = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};

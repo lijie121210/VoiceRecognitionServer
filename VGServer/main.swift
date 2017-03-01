@@ -7,6 +7,31 @@
 //
 
 import Foundation
+import CocoaAsyncSocket
 
-print("Hello, World!")
 
+func logging(arg: String) {
+    print("\(Date()): ", arg)
+}
+
+func startApp() { autoreleasepool { () -> () in
+    
+    let servApp = Server()
+    
+    logging(arg: "launching app server...")
+    
+    guard servApp.listen() else {
+        
+        logging(arg: "fail to start app server.")
+        
+        return
+    }
+    
+    logging(arg: "running current runloop...")
+
+    RunLoop.current.run()
+}}
+
+logging(arg: "launching app ...")
+
+startApp()
